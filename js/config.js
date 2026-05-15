@@ -9,6 +9,6 @@
  * will not submit orders to the database.
  */
 window.APP_CONFIG = {
-  supabaseUrl: "https://ylvxcxazxgeganzcmnyh.supabase.co",
-  supabaseAnonKey: "sb_publishable_fCmUZunFXTXaCKdWIA7uDQ_C4aXYspl",
+  supabaseUrl: "https://bpnyppwponofpnkbtwad.supabase.co",
+  supabaseAnonKey: "sb_publishable_sKM6uld_5CqK-Zhnv9Xe_g_LyhdUMJq",
 };
