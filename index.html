@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matchday Studio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page-home" data-page="home">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand" aria-label="Home">
+          <img class="site-logo" src="assets/logo.svg" width="160" height="44" alt="Your store logo" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="shop.html" data-nav="shop">Shop</a>
+          <a href="story.html" data-nav="story">Story</a>
+          <a href="checkout.html" data-nav="checkout">Checkout</a>
+        </nav>
+        <a href="bag.html" class="cart-toggle" id="bagLink" aria-label="View shopping bag">
+          <span class="cart-label">Bag</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-home">
+      <section class="home-hero">
+        <div class="home-hero-inner">
+          <p class="home-kicker">Crimson foundry</p>
+          <h1 class="home-title">Steel discipline.<br />Heat on the pitch.</h1>
+          <p class="home-subtitle">
+            Fanwear with a brushed-steel palette and a deep crimson pulse. Your bag is its own room —
+            codes stay visible end to end.
+          </p>
+          <div class="home-actions">
+            <a class="btn btn-primary" href="shop.html">Shop the drop</a>
+            <a class="btn btn-ghost" href="story.html">Read the story</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-tiles" aria-label="Explore">
+        <a href="shop.html" class="home-tile home-tile-shop">
+          <span class="home-tile-kicker">Catalog</span>
+          <span class="home-tile-title">Shop</span>
+          <span class="home-tile-meta">Pieces, prices, add to bag</span>
+        </a>
+        <a href="story.html" class="home-tile home-tile-story">
+          <span class="home-tile-kicker">Notebook</span>
+          <span class="home-tile-title">Story</span>
+          <span class="home-tile-meta">Why codes ride with you</span>
+        </a>
+        <a href="bag.html" class="home-tile home-tile-bag">
+          <span class="home-tile-kicker">Staging</span>
+          <span class="home-tile-title">Bag</span>
+          <span class="home-tile-meta">Full page · review codes</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer site-footer-minimal">
+      <p>© Matchday Studio</p>
+      <div class="footer-links">
+        <a href="shop.html">Shop</a>
+        <a href="bag.html">Bag</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

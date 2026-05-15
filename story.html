@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story — Matchday Studio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page-story" data-page="story">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand" aria-label="Home">
+          <img class="site-logo" src="assets/logo.svg" width="160" height="44" alt="Your store logo" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="shop.html" data-nav="shop">Shop</a>
+          <a href="story.html" data-nav="story">Story</a>
+          <a href="checkout.html" data-nav="checkout">Checkout</a>
+        </nav>
+        <a href="bag.html" class="cart-toggle" id="bagLink" aria-label="View shopping bag">
+          <span class="cart-label">Bag</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-story">
+      <article class="story-article">
+        <p class="story-eyebrow">Signal chain</p>
+        <h1 class="story-headline">From shelf code to packing slip.</h1>
+        <p class="story-lede muted">
+          Your bag stores each item as a short <strong>product_code</strong> (for example
+          <code>MD-VNT-01</code>). That same code lives in your Supabase <code>products</code> table, so
+          ops, support, and spreadsheets stay in lockstep.
+        </p>
+        <div class="story-columns">
+          <div>
+            <h2 class="story-h2">On the site</h2>
+            <p class="muted">
+              The bag is a dedicated page — not a drawer over your content — so customers can breathe while
+              they review quantities and codes.
+            </p>
+          </div>
+          <div>
+            <h2 class="story-h2">In the database</h2>
+            <p class="muted">
+              Checkout writes one <code>orders</code> row with <code>cart_json</code>: every code, qty, and
+              unit price at purchase time.
+            </p>
+          </div>
+        </div>
+        <p class="story-cta-wrap">
+          <a class="link-inline" href="shop.html">Shop</a>
+          <span class="muted"> · </span>
+          <a class="link-inline" href="bag.html">Open bag</a>
+          <span class="muted"> · </span>
+          <a class="link-inline" href="checkout.html">Checkout</a>
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer site-footer-minimal">
+      <p>© Matchday Studio</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="bag.html">Bag</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

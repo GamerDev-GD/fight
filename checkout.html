@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout — Matchday Studio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page-checkout" data-page="checkout">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand" aria-label="Home">
+          <img class="site-logo" src="assets/logo.svg" width="160" height="44" alt="Your store logo" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="shop.html" data-nav="shop">Shop</a>
+          <a href="story.html" data-nav="story">Story</a>
+          <a href="checkout.html" data-nav="checkout">Checkout</a>
+        </nav>
+        <a href="bag.html" class="cart-toggle" id="bagLink" aria-label="View shopping bag">
+          <span class="cart-label">Bag</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-checkout">
+      <header class="page-intro page-intro-tight">
+        <h1 class="page-title">Checkout</h1>
+        <p class="page-lede muted">
+          Your bag snapshot (with each product code) is saved on the Supabase order row when you submit.
+        </p>
+      </header>
+
+      <form class="checkout-form" id="checkoutForm" novalidate>
+        <div class="form-card">
+          <div class="form-row two">
+            <label class="field">
+              <span class="field-label">Full name</span>
+              <input type="text" name="customer_name" autocomplete="name" required placeholder=" " />
+            </label>
+            <label class="field">
+              <span class="field-label">Email</span>
+              <input type="email" name="email" autocomplete="email" required placeholder=" " />
+            </label>
+          </div>
+          <div class="form-row two">
+            <label class="field">
+              <span class="field-label">Phone</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder=" " />
+            </label>
+            <label class="field">
+              <span class="field-label">City</span>
+              <input type="text" name="city" autocomplete="address-level2" placeholder=" " />
+            </label>
+          </div>
+          <label class="field">
+            <span class="field-label">Street &amp; apartment</span>
+            <input type="text" name="address_line" autocomplete="street-address" placeholder=" " />
+          </label>
+          <div class="form-row two">
+            <label class="field">
+              <span class="field-label">Postal code</span>
+              <input type="text" name="postal_code" autocomplete="postal-code" placeholder=" " />
+            </label>
+            <label class="field">
+              <span class="field-label">Country</span>
+              <input type="text" name="country" autocomplete="country-name" placeholder=" " value="India" />
+            </label>
+          </div>
+          <label class="field">
+            <span class="field-label">Order notes</span>
+            <textarea name="notes" rows="3" placeholder="Optional message"></textarea>
+          </label>
+
+          <div class="order-summary" id="orderSummary" aria-live="polite">
+            <p class="summary-title">Bag summary</p>
+            <ul class="summary-lines" id="summaryLines"></ul>
+            <div class="summary-total">
+              <span>Total</span>
+              <strong id="summaryTotal">₹0</strong>
+            </div>
+          </div>
+
+          <p class="form-hint" id="formHint"></p>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitOrder">Place order</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer site-footer-minimal">
+      <p><a href="index.html">Home</a> · <a href="bag.html">Bag</a> · <a href="shop.html">Shop</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

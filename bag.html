@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bag — Matchday Studio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page-bag" data-page="bag">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand" aria-label="Home">
+          <img class="site-logo" src="assets/logo.svg" width="160" height="44" alt="Your store logo" />
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="shop.html" data-nav="shop">Shop</a>
+          <a href="story.html" data-nav="story">Story</a>
+          <a href="checkout.html" data-nav="checkout">Checkout</a>
+        </nav>
+        <a href="bag.html" class="cart-toggle" id="bagLink" aria-label="Shopping bag">
+          <span class="cart-label">Bag</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-bag">
+      <header class="page-intro">
+        <h1 class="page-title">Your bag</h1>
+        <p class="page-lede muted">
+          A full-page staging area. Adjust quantities here — each line keeps its <strong>product code</strong> for
+          fulfillment.
+        </p>
+      </header>
+
+      <div class="bag-layout">
+        <div class="bag-lines-wrap">
+          <ul class="cart-lines" id="cartLines"></ul>
+          <p class="muted small" id="bagEmptyHint" hidden>
+            Nothing here yet. <a class="link-inline" href="shop.html">Browse the shop</a> and tap add.
+          </p>
+        </div>
+
+        <aside class="bag-summary">
+          <div class="bag-summary-inner">
+            <h2>Summary</h2>
+            <div class="cart-total-row">
+              <span>Subtotal</span>
+              <strong id="cartSubtotal">₹0</strong>
+            </div>
+            <button type="button" class="btn btn-ghost btn-block" id="clearCart">Clear bag</button>
+            <a class="btn btn-primary btn-block" href="checkout.html">Continue to checkout</a>
+            <p class="muted small" style="margin-top: 14px; text-align: center; margin-bottom: 0">
+              <a class="link-inline" href="shop.html">Keep shopping</a>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer site-footer-minimal">
+      <p>© Matchday Studio</p>
+      <div class="footer-links">
+        <a href="shop.html">Shop</a>
+        <a href="checkout.html">Checkout</a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>
